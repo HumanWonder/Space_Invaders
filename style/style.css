@@ -1,5 +1,20 @@
 #workspace {
-    height: 800px;
     width: 850px;
-    background-color: grey;
+    height: 800px;
+    border: 1px solid blue;
+    margin: auto;
+}
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: lightgreen;
+    position: relative;
+    top: 720px;
+    left: 430px;
+}
+#missile {
+    width: 2px;
+    height: 4px;
+    background-color: rgb(214, 2, 2);
+    position: relative;
 }
