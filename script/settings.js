@@ -10,3 +10,6 @@ const playerWidth = parseInt(window.getComputedStyle(player).getPropertyValue("w
 const playerStartXPos = parseInt(window.getComputedStyle(player).getPropertyValue("left"));
 const playerStartYPos = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
 console.log(playerStartXPos, playerStartYPos);
+
+const leftBorder = document.getElementById("left-border");
+const rightBorder = document.getElementById("right-border");

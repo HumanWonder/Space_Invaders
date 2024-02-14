@@ -2,15 +2,52 @@
     width: 550px;
     height: 500px;
     border: 1px solid blue;
-    margin: auto;
+}
+.horizontal-b {
+    height: 5px;
+    width: inherit;
+}
+.vertical-b {
+    height: inherit;
+    width: 5px;
+}
+
+#up-border {
+    background-color: red;
+    position: absolute;
+}
+#left-border {
+    background-color: red;
+    position: absolute;
+    
+}
+#right-border {
+    background-color: red;
+    position: absolute;
+    left: 555px;
+}
+#down-border {
+    background-color: red;
+    position: absolute;
+    top: 580px;
+}
+#wrapper-ennemies {
+    background-color: beige;
+    position: relative;
+}
+.ennemy {
+    background-color: black;
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
 }
 #player {
     width: 20px;
     height: 20px;
     background-color: lightgreen;
-    position: relative;
-    top: 480px;
-    left: 280px;
+    position: absolute;
+    top: 560px;
 }
 #missile {
     width: 4px;

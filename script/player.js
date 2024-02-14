@@ -15,7 +15,7 @@ function moveLeft() {
     var leftBorder =
         parseInt(window.getComputedStyle(player).getPropertyValue("left"));
     //workspace left boundary : player won't move further 
-    if (leftBorder > 0) {
+    if (checkCollisions(leftBorder, player)) {
         player.style.left = leftBorder - speed + "px";
     }
 }
@@ -24,7 +24,7 @@ function moveRight() {
     var leftBorder =
         parseInt(window.getComputedStyle(player).getPropertyValue("left"));
     //workspace right boundary : player won't move further 
-    if (leftBorder < (workspaceBorderW-playerWidth)) {
+    if (checkCollisions(rightBorder, player)) {
         player.style.left = leftBorder + speed + "px";
     }
 }
