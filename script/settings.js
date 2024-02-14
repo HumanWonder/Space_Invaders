@@ -12,4 +12,6 @@ const playerStartYPos = parseInt(window.getComputedStyle(player).getPropertyValu
 console.log(playerStartXPos, playerStartYPos);
 
 const leftBorder = document.getElementById("left-border");
+var leftBorderLimits = leftBorder.getBoundingClientRect();
 const rightBorder = document.getElementById("right-border");
+var rightBorderLimits = rightBorder.getBoundingClientRect();

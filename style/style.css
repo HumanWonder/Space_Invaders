@@ -1,6 +1,7 @@
 #workspace {
     width: 550px;
     height: 500px;
+    margin: 0 auto;
     border: 1px solid blue;
 }
 .horizontal-b {
@@ -24,7 +25,7 @@
 #right-border {
     background-color: red;
     position: absolute;
-    left: 555px;
+    align-items: end;
 }
 #down-border {
     background-color: red;
@@ -47,7 +48,8 @@
     height: 20px;
     background-color: lightgreen;
     position: absolute;
-    top: 560px;
+    left: 300px;
+    top: 550px;
 }
 #missile {
     width: 4px;

@@ -1,3 +1,4 @@
+
 var player = document.getElementById("player");
 var speed = 10;
 var missileFired = false;
@@ -12,21 +13,27 @@ const controller = {
 function moveLeft() {
     //gets the position of the div "player" from the left side of the workspace
     //redefines the "left" style by substracting px
-    var leftBorder =
+    var leftPlayer =
         parseInt(window.getComputedStyle(player).getPropertyValue("left"));
     //workspace left boundary : player won't move further 
-    if (checkCollisions(leftBorder, player)) {
-        player.style.left = leftBorder - speed + "px";
+    if (leftPlayer > leftBorderLimits.right) {
+        player.style.left = leftPlayer - speed + "px";
     }
+    // if (leftPlayer >= 0) {
+    //     player.style.left = leftPlayer - speed + "px";
+    // }
 }
 function moveRight() {
     //same as left but moves it by adding px
-    var leftBorder =
+    var leftPlayer =
         parseInt(window.getComputedStyle(player).getPropertyValue("left"));
     //workspace right boundary : player won't move further 
-    if (checkCollisions(rightBorder, player)) {
-        player.style.left = leftBorder + speed + "px";
+    if ((leftPlayer+playerWidth) < rightBorderLimits.left) {
+        player.style.left = leftPlayer + speed + "px";
     }
+    // if (leftBorder <= (workspaceBorderW - playerWidth)) {
+    //     player.style.left = leftBorder + speed + "px";
+    // }
 }
 //makes the missile div on key press
 function shoot() {
@@ -39,7 +46,7 @@ function shoot() {
     missile.id = "missile";
 
     //where the missile will be placed on screen
-    playerXPos += playerWidth/2;
+    // playerXPos += playerWidth/2;
     missile.style.left = playerXPos + "px";
     missile.style.top = (playerStartYPos-playerHeight) + "px";
     //only appends the div once with a bool (it's false again after a condition in animateMissile func)
