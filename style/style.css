@@ -1,0 +1,239 @@
+.title {
+    width: 400px;
+    height: 200px;
+    left: 42%;
+    position: relative;
+    background-image: url(../ressources/baseResources/logojeu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#startMenu {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    left: 33%;
+    background-image: url(../ressources/baseResources/56586c83d06a53b3c25ce54bb4278f62.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#startMenu h2 {
+    color: white;
+    position: relative;
+    left: 5%;
+    top: 48%;
+    font-size: 20px;
+}
+
+#startMenu p {
+    color: white;
+    position: relative;
+    left: 5%;
+    top: 50%;
+    font-size: 13px;
+}
+
+#startButton {
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    width: 180px;
+    height: 180px;
+    font-size: 20px;
+    border: 4px;
+    border-style: solid;
+    border-color: black;
+}
+
+#pauseMenu {
+    opacity: 80%;
+    position: absolute;
+    z-index: 10;
+    width: 800px;
+    height: 600px;
+    left: 33%;
+    background-color: rgba(0, 0, 139, 0.5);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 300px;
+}
+
+#restartButton {
+    width: 120px;
+    height: 120px;
+    top: 43%;
+    left: 54%;
+    font-size: 11px;
+}
+
+#resumeButton {
+    height: 120px;
+    width: 120px;
+    top: 43%;
+    left: 34%;
+    font-size: 11px;
+}
+
+.button {
+    background-image: url(../ressources/baseResources/Button-Blue-LED-03g.png);
+    background-size: 230px 230px;
+    background-size: contain;
+    border: 1px;
+    border-radius: 60%;
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    font-family: Pixel-Font;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    margin: 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(1, 1, 88);
+}
+
+#gameOverMenu {
+    position: relative;
+    z-index: 10;
+    width: 800px;
+    height: 600px;
+    background-color: rgba(0, 0, 139, 0.5);
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 300px;
+}
+
+#victoryMenu {
+    position: absolute;
+    z-index: 10;
+    width: 800px;
+    height: 600px;
+    left: 33%;
+    background-color: rgba(0, 0, 139, 0.5);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 300px;
+}
+
+#newGameButton {
+    height: 140px;
+    width: 140px;
+    top: 50%;
+    left: 41%;
+    font-size: 12px;
+
+}
+
+#workspace {
+    border: 1px;
+    display: none;
+    width: 800px;
+    height: 600px;
+    position: relative;
+    left: 33%;
+    background-image: url("../ressources/backgroundSpace.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* border: 1px solid blue; */
+}
+/* img {
+    height: 110%;
+} */
+.horizontal-b {
+    height: 5px;
+    width: inherit;
+}
+
+.vertical-b {
+    height: inherit;
+    width: 5px;
+}
+
+#up-border {
+    /* background-color: red; */
+    position: absolute;
+}
+
+#left-border {
+    /* background-color: red; */
+    position: absolute;
+}
+
+#right-border {
+    /* background-color: red; */
+    position: absolute;
+    right: 0%;
+}
+
+#down-border {
+    /* background-color: red; */
+    position: absolute;
+    top: 100%;
+}
+
+#wrapperennemies {
+    opacity: 70%;
+    display: inline-block;
+    /* background-color: red; */
+    /* top: 5%; */
+    position: absolute;
+    /* left: 25%; */
+    width: auto;
+    z-index: 3;
+    /* border: red 1px solid; */
+
+}
+
+/* .ennemy {
+    background-color: black;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+} */
+#player {
+    width: 36px;
+    height: 16px;
+    background-image: url("../ressources/playerSprite-export.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    /* bottom: 5%; */
+    top: 95%
+}
+
+#enemyMissile {
+    width: 6px;
+    height: 16px;
+    background-image: url("../ressources/enemyMissile-export.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+#missile {
+    width: 10px;
+    height: 10px;
+    background-image: url("../ressources/playerMissile-export.png");
+    position: absolute;
+}
+
+body {
+    overflow: hidden;
+
+}
+
+@font-face {
+    font-family: Pixel-Font;
+    src: url(../ressources/retro_computer_personal_use.ttf);
+}

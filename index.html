@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Space Invaders</title>
+</head>
+
+<body style="background-image: url(../ressources/baseResources/arcadeBG.jpg); background-repeat: no-repeat; background-size: cover; font-family:Pixel-Font; color: white;">
+    <div class="title"></div>
+    <div id="startMenu">
+        <h2>Controls :</h2>
+        <p>Arrows : Move Player</p>
+        <p>Space : Shoot</p>
+        <p>P : Pause</p>
+        <p>R : Restart</p>
+        <p>Enter : Start the game (Only on the start menu)</p>
+        <button id="startButton" class="button" onclick="gameStart()">Start</button>
+    </div>
+    <div id="stopwatch">00:00:00</div>
+    <div id="workspace">
+        <div id="up-border" class="horizontal-b"></div>
+        <div id="left-border" class="vertical-b"></div>
+        <div id="right-border" class="vertical-b"></div>
+        <div id="down-border" class="horizontal-b"></div>
+
+        <div id="wrapperennemies">
+            <!-- generate enemy here -->
+        </div>
+        <div id="player"></div>
+    </div>
+
+</body>
+<script src="script/utils.js"></script>
+<script src="script/gameManager.js"></script>
+<script src="script/settings.js"></script>
+<script src="script/player.js"></script>
+<script src="script/ennemies.js"></script>
+<script src="script/collisions.js"></script>
+
+</html>
