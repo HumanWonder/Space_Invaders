@@ -233,6 +233,18 @@ body {
 
 }
 
+/* #tilemap {
+    position: relative;
+    width: 96px;
+    height: 16px;
+}
+
+.tile {
+    position: absolute;
+    background-size: 96px 16px;
+    box-sizing: border-box;
+} */
+
 @font-face {
     font-family: Pixel-Font;
     src: url(../ressources/retro_computer_personal_use.ttf);

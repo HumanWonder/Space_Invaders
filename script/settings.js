@@ -37,11 +37,13 @@ var enemyHeight = 16
 // enemy speed
 let enemySpeed = 3;
 let enemyDown = 8;
+
+var enemyLives = 0;
 // bool for enemy moving
 let changeWay = false;
 // generation of enemies
 let enemyNumber = 40;
-let enemyPerLine = 8;
+let enemyPerLine = 10;
 // speed of the enemy missile
 let enemyMissileSpeed = 5;
 // fireRate
@@ -116,4 +118,29 @@ var startTime;
 var stopWatchInterval;
 var elapsedPausedTime = 0; //keep track of the elapsed time while paused
 var gamePlaying = false;
+//#endregion
+
+var level = 1;
+
+//#region Enemy Map
+    var mapOne = [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ];    
+
+    var mapTwo = [
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        0, 1, 1, 1, 2, 2, 1, 1, 1, 0,
+        0, 1, 1, 2, 2, 2, 2, 1, 1, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ];
+
+    var mapThree = [
+        2, 1, 1, 0, 1, 1, 0, 1, 1, 2,
+        1, 2, 1, 1, 0, 0, 1, 1, 2, 1,
+        1, 1, 2, 1, 1, 1, 1, 2, 1, 1,
+        0, 1, 1, 2, 1, 1, 2, 1, 1, 0,
+        1, 0, 1, 1, 2, 2, 1, 1, 0, 1,
+    ]
 //#endregion
