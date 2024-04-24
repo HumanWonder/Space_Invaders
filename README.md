@@ -1,15 +1,22 @@
-TO-DO list + ideas :
+# Space Invaders Game
 
-Elements :
-- Workspace
-- Ennemis : Espace général (tous les ennemis se déplacent) et/ou individuel (permet d'en enlever quand ils sont vaincus)
-- Joueur
-- Tir (ennemis + joueur), peuvent s'entrechoquer
-- (facultatif) Barricades/ Astéroïdes (à voir ce qu'on veut implémenter dans le gameplay, peut-être dans différents niveaux)
-<br>
-A voir : Changer le gameplay en horizontal plutôt que vertical (mais énoncé ne peut peut-être pas l'accorder)
-<br>
-Mouvements du joueur : key events
-<br>
-Réf : - https://betterprogramming.pub/create-the-classic-space-invaders-game-af087786d63b
-      - https://github.com/0bIivi0n/make-your-game/blob/main/index.html
+This is a simple Space Invaders game built using JavaScript, HTML, and CSS. The objective is to control the spaceship and destroy incoming enemies by firing missiles.
+
+# Gameplay
+- Use the left and right arrow keys to move the spaceship horizontally.
+- Press the spacebar to fire a missile.
+- Press 'p' or 'P' to pause or resume the game.
+- Press 'r' or 'R' to restart the game.
+- Press 'Enter' to start the game if it hasn't begun.
+
+# Features
+
+- Smooth movement of the spaceship and enemies.
+- Collision detection between missiles and enemies.
+- Game over and victory screens.
+
+# Performance Improvement
+Asynchronous updates using requestAnimationFrame for the missile's movement.
+
+# Usage
+Include the code in an HTML file and ensure that the required resources (CSS, images, etc.) are accessible. Run the HTML file in a web browser to play the game.
