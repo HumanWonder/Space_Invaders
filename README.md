@@ -1,6 +1,7 @@
 # Space Invaders Game
 
 This is a simple Space Invaders game built using JavaScript, HTML, and CSS. The objective is to control the spaceship and destroy incoming enemies by firing missiles.
+You can only shoot one missile at a time.
 
 # Gameplay
 - Use the left and right arrow keys to move the spaceship horizontally.
@@ -16,7 +17,8 @@ This is a simple Space Invaders game built using JavaScript, HTML, and CSS. The 
 - Game over and victory screens.
 
 # Performance Improvement
-Asynchronous updates using requestAnimationFrame for the missile's movement.
+Asynchronous updates using requestAnimationFrame for the missile's/player's movements.
 
 # Usage
 Include the code in an HTML file and ensure that the required resources (CSS, images, etc.) are accessible. Run the HTML file in a web browser to play the game.
+If you have Vscode, use the live server extension.
