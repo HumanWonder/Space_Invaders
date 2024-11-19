@@ -73,7 +73,7 @@ function animateMissile() {
             playerScore.innerText = "Score : " + (score + missileKilled);
             score += missileKilled;
             enemyMissileDiv.remove();
-            setTimeout(function() {
+            setTimeout(function () {
                 div.remove();
             }, 100);
             enemyMissiledFired = false;
@@ -85,26 +85,40 @@ function animateMissile() {
         var bigbaddies = document.querySelectorAll(".enemy");
         bigbaddies.forEach((enemy) => {
             //console.log("checking :", enemy);
-            if (checkCollision(div, enemy)) {
-                if (bigbaddies.length == 1) {
-                    playerScore.innerText = "Score : " + (score + enemyKilled);
-                    score += enemyKilled;
-                    console.log("You won !");
-                    setTimeout(function() {
-                        victory();
-                        return;
-                    }, 500);
+
+                if (checkCollision(div, enemy)) {
+                    enemy.dataset.live -= 1 
+                    if (enemy.dataset.live == 0) {
+                        enemy.style.backgroundImage = "url(../ressources/enemyDestroyed-export.png)";
+
+                        playerScore.innerText = "Score : " + (score + enemyKilled);
+                        score += enemyKilled;
+                        setTimeout(function () {
+                            enemy.remove()
+                        }, 500);
+                    }
+
+                    div.style.width = "12px";
+                    div.style.height = "16px";
+                    div.style.backgroundImage = "url(../ressources/missileDestroyed-export.png)"
+                    div.remove();
+                    missileFired = false;
+                    // if no more enemies
+                    if (bigbaddies.length == 1) {
+                        playerScore.innerText = "Score : " + (score + enemyKilled);
+                        score += enemyKilled;
+                        console.log("You won !");
+                        if (level != 3) {
+                            level++
+                            generateEnemies();
+                        } else if (level == 3) {
+                            setTimeout(function() {
+                                victory();
+                                return;
+                            }, 500);
+                        }
+                    }
                 }
-                enemy.style.backgroundImage = "url(../ressources/enemyDestroyed-export.png)";
-                // enemy.style.speed = 0;
-                playerScore.innerText = "Score : " + (score + enemyKilled);
-                score += enemyKilled;
-                div.remove();
-                setTimeout(function() {
-                    enemy.remove()
-                }, 500);
-                missileFired = false;
-            }
         });
 
     }

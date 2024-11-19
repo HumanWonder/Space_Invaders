@@ -60,6 +60,10 @@ function displayLives(livesNumber) {
     return livesNumber
 }
 
+function enemyLives() {
+    
+}
+
 // variable to store our intervalID
 let nIntervId;
 

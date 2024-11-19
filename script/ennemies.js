@@ -1,30 +1,44 @@
 function generateEnemies() {
-    var enemySprite = 3;
-    for (var i = 0; i < enemyNumber; i++) {
-        var enemy = document.createElement("div");
-        enemy.className = "enemy";
-        enemy.id = i;
-
-        if (randomNumber(enemySprite) === 2) {
-            // console.log("3", randomNumber(enemySprite))
-            enemy.style.backgroundImage = "url(../ressources/enemy3-export.gif)";
-        } else if (randomNumber(enemySprite) === 1) {
-            // console.log("2", randomNumber(enemySprite))
-            enemy.style.backgroundImage = "url(../ressources/enemy2-export.gif)";
-        } else {
-        // console.log("1", randomNumber(enemySprite))
-            enemy.style.backgroundImage = "url(../ressources/enemies1-export.gif)";
-        }
-
-        enemy.style.backgroundSize = "cover";
-        enemy.style.backgroundRepeat = "no-repeat";
-        enemy.style.left = (i % enemyPerLine) * (enemyWidth * 1.5) + 'px';
-        enemy.style.top = Math.floor(i / enemyPerLine) * (enemyHeight * 1.5) + 'px';
-        enemy.style.position = "absolute";
-        enemy.style.width = enemyWidth + 'px';
-        enemy.style.height = enemyHeight + 'px';
-        document.getElementById("wrapperennemies").appendChild(enemy);
+    if (level == 1) {
+        tileMapCreator(mapOne);
+    } else if (level == 2) {
+        tileMapCreator(mapTwo);
+        enemies.style.left = 0;
+        enemies.style.top = 0;
+    } else if (level == 3) {
+        tileMapCreator(mapThree);
+        enemies.style.left = 0;
+        enemies.style.top = 0;
     }
+}
+
+
+function tileMapCreator(map) {
+    const tilemap = document.getElementById('wrapperennemies');
+
+    for (var i = 0; i < map.length; i ++) {
+        var tile = document.createElement('div');
+        tile.classList = 'enemy';
+        tile.id = i;
+        if (map[i] == 0) {
+            tile.style.backgroundImage = "url(../ressources/enemies1-export.gif)";
+            tile.dataset.live = 1;
+        } else if (map[i] == 1) {
+            tile.style.backgroundImage = "url('../ressources/enemy2-export.gif')";
+            tile.dataset.live = 2;
+        } else if (map[i] == 2) {
+            tile.style.backgroundImage = "url('../ressources/enemy3-export.gif')";
+            tile.dataset.live = 3;
+        }
+        tile.style.left = (i % enemyPerLine) * (enemyWidth * 1.5) + 'px';
+        tile.style.top = Math.floor(i / enemyPerLine) * (enemyHeight * 1.5) + 'px';
+        tile.style.position = "absolute";
+        tile.style.width = '32px';
+        tile.style.height = '16px';
+        tilemap.appendChild(tile);
+        console.log(map[i]);
+
+    }    
 }
 
 function moveEnemyRight() {
@@ -70,6 +84,7 @@ function moveEnemyLeft() {
         }
     }
 }
+
 
 function enemyShoot(enemyID) {
     // get the enemyID
