@@ -123,6 +123,10 @@ var gamePlaying = false;
 var level = 1;
 
 //#region Enemy Map
+//Legend :
+//0: base enemy (1 shot required)
+//1: type 2 enemy (2 shots required)
+//2: harder enemy (3 shots required)
     var mapOne = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
