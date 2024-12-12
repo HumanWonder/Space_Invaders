@@ -14,6 +14,7 @@ You can only shoot one missile at a time.
 
 - Smooth movement of the spaceship and enemies.
 - Collision detection between missiles and enemies.
+- 3 different levels of ennemies.
 - Game over and victory screens.
 
 # Performance Improvement
@@ -22,6 +23,8 @@ Asynchronous updates using requestAnimationFrame for the missile's/player's move
 # Usage
 Include the code in an HTML file and ensure that the required resources (CSS, images, etc.) are accessible. Run the HTML file in a web browser to play the game.
 If you have Vscode, use the live server extension.
+
+Or play here : (link to portfolio)
 
 
 Subject : https://zone01normandie.org/git/root/public/src/branch/master/subjects/make-your-game
